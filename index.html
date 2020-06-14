@@ -4,8 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christian Tudeschini</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Olá!</h1>
+    <header>
+        <h1>CHRISTIAN TUDESCHINI</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="sobre">
+                <div class="sobre__img">
+                    <img src="./assets/images/eu.jpg" alt="Eu" width="150px">
+                </div>
+                <div class="sobre__text">
+                    <h2 class="title">Christian Tudeschini</h2>
+                    <p>Meu nome é Christian, tenho 18 anos e sou Front-End Developer na RM07 Digital </p>
+                    <a class="sobre__btn" href="https://github.com/ChristianTudeschini">Saiba Mais</a>
+
+                    <div class="text__links">
+                        <a href="https://www.linkedin.com/in/christiantudeschini/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/ChristianTudeschini"><i class="fab fa-github-square"></i></a>
+                        <a href="https://www.behance.net/christitpere"><i class="fab fa-behance-square"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="repositorios">
+                <h2 class="title">Repositórios:</h2>
+
+                <div class="flex-container">
+
+                    <article class="repositorio">
+                        <a href="">
+                            <h3></h3>
+                            <p></p>
+                        </a>
+                    </article>
+
+                    <article class="repositorio">
+                        <a href="">
+                            <h3></h3>
+                            <p></p>
+                        </a>
+                    </article>
+
+                    <article class="repositorio">
+                        <a href="">
+                            <h3></h3>
+                            <p></p>
+                        </a>
+                    </article>
+
+                    <article class="repositorio">
+                        <a href="">
+                            <h3></h3>
+                            <p></p>
+                        </a>
+                    </article>
+
+                    <article class="repositorio">
+                        <a href="">
+                            <h3></h3>
+                            <p></p>
+                        </a>
+                    </article>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Site criado por: <a href="https://github.com/ChristianTudeschini">Christian Tudeschini</a></p>
+    </footer>
+
+    <script>
+        var username = 'christiantudeschini'
+
+        var promise = () => {
+            return new Promise(function(resolve, reject) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET','https://api.github.com/users/'+username+'/repos');
+                xhr.send(null);
+
+                xhr.onreadystatechange = () => {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200)
+                            resolve(JSON.parse(xhr.responseText));
+                        else
+                            reject();
+                    }
+                }
+            });
+
+        }
+
+        promise()
+            .then((res) => {
+                alert(res);
+            })
+            .catch((error) => {
+                alert(error);
+            });
+
+        }
+    </script>
+
+    <script src="https://kit.fontawesome.com/23e3bc7460.js" crossorigin="anonymous"></script>
 </body>
 </html>

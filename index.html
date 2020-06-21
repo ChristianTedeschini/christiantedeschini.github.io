@@ -36,37 +36,39 @@
                 <div class="flex-container">
 
                     <article class="repositorio">
-                        <a href="">
-                            <h3></h3>
-                            <p></p>
+                        <a href="https://github.com/ChristianTudeschini/desafios-starter">
+                            <h3>desafios-starter</h3>
+                            <p>Os desafios propostos durante os cursos do Starter da Rocketseat resolvidos.</p>
                         </a>
                     </article>
 
                     <article class="repositorio">
-                        <a href="">
-                            <h3></h3>
-                            <p></p>
+                        <a href="https://github.com/ChristianTudeschini/monitorador-site">
+                            <h3>Monitorador de Sites</h3>
+                            <p>Monitorador feito em Go que verifica se determinado site está ou não online.</p>
                         </a>
                     </article>
-
+                    
                     <article class="repositorio">
-                        <a href="">
-                            <h3></h3>
-                            <p></p>
+                        <a href="https://github.com/ChristianTudeschini/petshop-api">
+                            <h3>petshop-api</h3>
+                            <p>Repositório para API de gerenciamento de petshop utilizando Rest com NodeJS</p>
                         </a>
                     </article>
-
+                    
                     <article class="repositorio">
-                        <a href="">
-                            <h3></h3>
-                            <p></p>
+                        <a href="https://github.com/ChristianTudeschini/alura-timer">
+                            <h3>alura-timer</h3>
+                            <p>Repositório para a aplicação Alura Timer desenvolvida durante o curso de Electron da 
+                                Alura
+                            </p>
                         </a>
                     </article>
-
+                    
                     <article class="repositorio">
-                        <a href="">
-                            <h3></h3>
-                            <p></p>
+                        <a href="https://github.com/ChristianTudeschini/christiantudeschini.github.io">
+                            <h3>christiantudeschini.github.io</h3>
+                            <p>Meu site: https://christiantudeschini.github.io/</p>
                         </a>
                     </article>
 
@@ -80,35 +82,72 @@
     </footer>
 
     <script>
-        var username = 'christiantudeschini'
 
-        var promise = () => {
-            return new Promise(function(resolve, reject) {
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET','https://api.github.com/users/'+username+'/repos');
-                xhr.send(null);
+        // Uma das próximas funções do site é automatizar a procura de repositórios
+        // No código abaixo, já consigo pegar todos os meus respositórios, ainda estou trabalhando pra automatizar a exibição dos mesmos
 
-                xhr.onreadystatechange = () => {
-                    if (xhr.readyState === 4) {
-                        if (xhr.status === 200)
-                            resolve(JSON.parse(xhr.responseText));
-                        else
-                            reject();
+        /* var arr = [];
+
+        async function pegaRepositorios() {
+            var username = 'christiantudeschini'
+
+            var promise = () => {
+                return new Promise(function(resolve, reject) {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET','https://api.github.com/users/'+username+'/repos');
+                    xhr.send(null);
+
+                    xhr.onreadystatechange = () => {
+                        if (xhr.readyState === 4) {
+                            if (xhr.status === 200)
+                                resolve(JSON.parse(xhr.responseText));
+                            else
+                                reject();
+                        }
                     }
-                }
-            });
+                });
+            }
 
+            promise()
+                .then((response) => {
+                    for (let x = 0; x < response.length-1; x++) {
+                        arr = response[x];
+                        
+                    }
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
         }
 
-        promise()
-            .then((res) => {
-                alert(res);
-            })
-            .catch((error) => {
-                alert(error);
-            });
-
+        function articleTemplate() {
+            var article = document.createElement('article', );
+            article.classList.add('repositorio');
+            
+            var link = document.createElement('a');
+            link.href = "https://github.com/ChristianTudeschini";
+            
+            var h3 = document.createElement('h3');
+            h3.innerHTML = "teste";
+            
+            var p = document.createElement('p');
+            p.innerHTML = "teste2";
+        
+            link.appendChild(h3);
+            link.appendChild(p);
+            article.appendChild(link);
+            repositorios.appendChild(article);
         }
+
+        var repositorios = document.querySelector('.repositorios .flex-container');
+        
+        pegaRepositorios()
+
+        for (let x = 1; x <= 5; x++) {
+            console.log(arr[x]);
+            
+        } */
+
     </script>
 
     <script src="https://kit.fontawesome.com/23e3bc7460.js" crossorigin="anonymous"></script>

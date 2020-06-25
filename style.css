@@ -242,7 +242,6 @@ footer p a {
 
 @media screen and (max-width: 500px) {
     header h1 {
-        font-family: 'BD Plakatt', Impact, Arial, sans-serif;
         font-size: 42px;
         text-align: center;
     }
@@ -258,4 +257,8 @@ footer p a {
         margin-left: 0px !important;
         text-align: center;
     }
+   
+   .repositorio {
+        width: 90%;
+   }
 }
